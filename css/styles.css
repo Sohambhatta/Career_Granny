@@ -198,156 +198,251 @@ body {
     transform: translateY(0);
 }
 
+/* 
+=======================================
+3. TYPOGRAPHY & UTILITY CLASSES
+=======================================
+
+These classes provide consistent typography and commonly used utilities
+throughout the website. They establish the visual hierarchy and provide
+reusable components for layout and spacing.
+*/
+
+/**
+ * Section title styling with decorative underline
+ * Used for main headings on each page (About, Events, etc.)
+ * Creates consistent visual hierarchy with accent color
+ */
 .section-title {
-    font-size: var(--font-size-4xl);
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: var(--spacing-2xl);
-    color: var(--primary-color);
-    position: relative;
+    font-size: var(--font-size-4xl);    /* Large, attention-grabbing size */
+    font-weight: 700;                    /* Bold weight for emphasis */
+    text-align: center;                  /* Center alignment for balance */
+    margin-bottom: var(--spacing-2xl);   /* Generous bottom spacing */
+    color: var(--primary-color);         /* Brand color for consistency */
+    position: relative;                  /* Enable absolute positioning of pseudo-element */
 }
 
+/**
+ * Decorative underline for section titles
+ * Provides visual accent and brand consistency
+ */
 .section-title::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 4px;
-    background: var(--warm-gold);
-    border-radius: 2px;
+    content: '';                         /* Empty content for visual element */
+    position: absolute;                  /* Position relative to parent */
+    bottom: -10px;                       /* Position below text */
+    left: 50%;                          /* Center horizontally */
+    transform: translateX(-50%);         /* Perfect centering with transform */
+    width: 80px;                        /* Fixed width for consistency */
+    height: 4px;                        /* Thickness of underline */
+    background: var(--warm-gold);        /* Accent color for visibility */
+    border-radius: 2px;                 /* Slightly rounded corners */
 }
 
+/**
+ * Gradient text effect for special headings
+ * Creates eye-catching text with brand gradient
+ * Used for hero headings and special emphasis
+ */
 .gradient-text {
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    background: var(--gradient-primary);    /* Apply gradient background */
+    -webkit-background-clip: text;          /* Clip background to text (WebKit) */
+    -webkit-text-fill-color: transparent;   /* Make text transparent (WebKit) */
+    background-clip: text;                  /* Standard property for clipping */
 }
 
-/* ===== BUTTONS ===== */
+
+/* 
+=======================================
+4. BUTTON COMPONENTS
+=======================================
+
+Comprehensive button system with multiple variants and interactive effects.
+All buttons include hover animations and consistent styling patterns.
+*/
+
+/**
+ * Base button styles
+ * Shared by all button variants for consistency
+ * Includes interactive shine effect on hover
+ */
 .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--spacing-xs);
-    padding: var(--spacing-sm) var(--spacing-lg);
-    border: none;
-    border-radius: var(--radius-xl);
-    font-family: var(--font-primary);
-    font-size: var(--font-size-base);
-    font-weight: 600;
-    text-decoration: none;
-    cursor: pointer;
-    transition: all var(--transition-base);
-    position: relative;
-    overflow: hidden;
+    display: inline-flex;               /* Flexbox for icon + text alignment */
+    align-items: center;                /* Vertical centering of content */
+    gap: var(--spacing-xs);             /* Space between icon and text */
+    padding: var(--spacing-sm) var(--spacing-lg); /* Comfortable padding */
+    border: none;                       /* Remove default border */
+    border-radius: var(--radius-xl);    /* Rounded corners for modern look */
+    font-family: var(--font-primary);   /* Consistent typography */
+    font-size: var(--font-size-base);   /* Standard readable size */
+    font-weight: 600;                   /* Medium-bold for emphasis */
+    text-decoration: none;              /* Remove underline for links */
+    cursor: pointer;                    /* Pointer cursor for interactivity */
+    transition: all var(--transition-base); /* Smooth transitions */
+    position: relative;                 /* Enable pseudo-element positioning */
+    overflow: hidden;                   /* Contain shine effect animation */
 }
 
+/**
+ * Shine effect animation on button hover
+ * Creates a subtle light sweep across the button
+ */
 .btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: left var(--transition-slow);
+    content: '';                        /* Empty content for visual effect */
+    position: absolute;                 /* Position relative to button */
+    top: 0;                            /* Full height coverage */
+    left: -100%;                       /* Start off-screen left */
+    width: 100%;                       /* Full width coverage */
+    height: 100%;                      /* Full height coverage */
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent); /* Shine effect */
+    transition: left var(--transition-slow); /* Smooth movement animation */
 }
 
+/**
+ * Trigger shine effect on button hover
+ */
 .btn:hover::before {
-    left: 100%;
+    left: 100%;                        /* Move shine across button */
 }
 
+/**
+ * Primary button variant - main call-to-action style
+ * Uses brand gradient and prominent shadows
+ */
 .btn-primary {
-    background: var(--gradient-secondary);
-    color: var(--text-primary);
-    box-shadow: 0 20px 40px rgba(242, 170, 28, 0.3);
+    background: var(--gradient-secondary); /* Warm gradient background */
+    color: var(--text-primary);            /* Readable text color */
+    box-shadow: 0 20px 40px rgba(242, 170, 28, 0.3); /* Prominent shadow */
 }
 
 .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 25px 50px rgba(242, 170, 28, 0.4);
+    transform: translateY(-2px);            /* Lift effect on hover */
+    box-shadow: 0 25px 50px rgba(242, 170, 28, 0.4); /* Enhanced shadow */
 }
 
+/**
+ * Secondary button variant - outlined style
+ * Used for less prominent actions
+ */
 .btn-secondary {
-    background: transparent;
-    color: var(--primary-color);
-    border: 2px solid var(--primary-color);
+    background: transparent;            /* Transparent background */
+    color: var(--primary-color);       /* Brand color text */
+    border: 2px solid var(--primary-color); /* Outlined border */
 }
 
 .btn-secondary:hover {
-    background: var(--primary-color);
-    color: white;
-    transform: translateY(-2px);
+    background: var(--primary-color);   /* Fill background on hover */
+    color: white;                       /* White text for contrast */
+    transform: translateY(-2px);        /* Lift effect */
 }
 
+/**
+ * Outline button variant - minimal style
+ * Used for subtle actions and resource cards
+ */
 .btn-outline {
-    background: transparent;
-    color: var(--primary-color);
-    border: 1px solid var(--primary-color);
+    background: transparent;            /* Transparent background */
+    color: var(--primary-color);       /* Brand color text */
+    border: 1px solid var(--primary-color); /* Thin border */
 }
 
 .btn-outline:hover {
-    background: var(--primary-color);
-    color: var(--text-primary);
+    background: var(--primary-color);   /* Fill on hover */
+    color: var(--text-primary);        /* Contrasting text */
 }
 
-/* ===== NAVIGATION ===== */
+
+/* 
+=======================================
+5. NAVIGATION SYSTEM
+=======================================
+
+Fixed navigation bar with glass-morphism effect, responsive design,
+and smooth interactions. Includes mobile hamburger menu and active states.
+*/
+
+/**
+ * Main navigation bar
+ * Fixed positioning with backdrop blur for modern glass effect
+ * Maintains visibility while scrolling through content
+ */
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(46, 134, 171, 0.1);
-    z-index: 1000;
-    transition: all var(--transition-base);
-    box-shadow: 0 2px 20px rgba(46, 134, 171, 0.08);
+    position: fixed;                    /* Fixed at top of viewport */
+    top: 0;                            /* Positioned at very top */
+    left: 0;                           /* Full width coverage */
+    right: 0;                          /* Full width coverage */
+    background: rgba(255, 255, 255, 0.95); /* Semi-transparent white */
+    backdrop-filter: blur(10px);        /* Glass-morphism blur effect */
+    border-bottom: 1px solid rgba(46, 134, 171, 0.1); /* Subtle border */
+    z-index: 1000;                     /* Above all other content */
+    transition: all var(--transition-base); /* Smooth state changes */
+    box-shadow: 0 2px 20px rgba(46, 134, 171, 0.08); /* Subtle shadow */
 }
 
+/**
+ * Enhanced navbar styling when page is scrolled
+ * Provides additional visual feedback and depth
+ */
 .navbar.scrolled {
-    background: rgba(255, 255, 255, 0.98);
-    box-shadow: 0 4px 30px rgba(46, 134, 171, 0.12);
+    background: rgba(255, 255, 255, 0.98); /* More opaque when scrolled */
+    box-shadow: 0 4px 30px rgba(46, 134, 171, 0.12); /* Enhanced shadow */
 }
 
+/**
+ * Navigation container layout
+ * Centers content and handles responsive spacing
+ */
 .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: var(--spacing-sm) var(--spacing-md);
-    max-width: 1200px;
-    margin: 0 auto;
+    display: flex;                      /* Flexbox layout */
+    justify-content: space-between;     /* Logo left, menu right */
+    align-items: center;                /* Vertical centering */
+    padding: var(--spacing-sm) var(--spacing-md); /* Comfortable padding */
+    max-width: 1200px;                  /* Consistent max width */
+    margin: 0 auto;                     /* Center the container */
 }
 
+/**
+ * Navigation logo styling
+ * Uses gradient text effect for brand recognition
+ */
 .nav-logo h2 {
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    font-size: var(--font-size-2xl);
-    font-weight: 700;
+    background: var(--gradient-primary); /* Brand gradient */
+    -webkit-background-clip: text;       /* Clip to text shape */
+    -webkit-text-fill-color: transparent; /* Make text transparent */
+    background-clip: text;               /* Standard clipping property */
+    font-size: var(--font-size-2xl);    /* Prominent size */
+    font-weight: 700;                   /* Bold for brand presence */
 }
 
+/**
+ * Navigation menu layout
+ * Horizontal layout with consistent spacing
+ */
 .nav-menu {
-    display: flex;
-    gap: var(--spacing-lg);
+    display: flex;                      /* Horizontal flex layout */
+    gap: var(--spacing-lg);             /* Consistent spacing between links */
 }
 
+/**
+ * Individual navigation links
+ * Includes hover effects and active state indicators
+ */
 .nav-link {
-    color: var(--dark-grey);
-    text-decoration: none;
-    font-weight: 500;
-    transition: all var(--transition-base);
-    position: relative;
-    padding: 0.5rem 1rem;
-    border-radius: var(--radius-md);
+    color: var(--dark-grey);            /* Standard text color */
+    text-decoration: none;              /* Remove underline */
+    font-weight: 500;                   /* Medium weight for readability */
+    transition: all var(--transition-base); /* Smooth interactions */
+    position: relative;                 /* Enable pseudo-element effects */
+    padding: 0.5rem 1rem;               /* Comfortable click area */
+    border-radius: var(--radius-md);    /* Subtle rounded corners */
 }
 
+/**
+ * Navigation link hover indicator
+ * Creates animated underline effect
+ */
 .nav-link::after {
-    content: '';
-    position: absolute;
+    content: '';                        /* Empty content for visual effect */
+    position: absolute;                 /* Position relative to link */
     bottom: -2px;
     left: 50%;
     width: 0;

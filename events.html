@@ -1,22 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- 
+    ===== EVENTS PAGE =====
+    This page displays upcoming events and workshops
+    - Event filtering by category (workshops, networking, etc.)
+    - Dynamic event grid populated by JavaScript
+    - Card-based layout with event details
+    - Interactive filter buttons
+-->
 <head>
+    <!-- Basic HTML5 document setup -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Page-specific title -->
     <title>Events - Career Granny</title>
+    
+    <!-- Shared stylesheet -->
     <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Google Fonts setup -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
 </head>
+
+
 <body>
-    <!-- Navigation -->
+
+    <!-- 
+        ===== NAVIGATION BAR =====
+        Same navigation structure as other pages
+        Note: 'active' class is on "Events" link for this page
+    -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
+            
             <div class="nav-logo">
                 <h2>Career Granny</h2>
             </div>
+            
             <div class="nav-menu" id="nav-menu">
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="about.html" class="nav-link">About</a>
@@ -26,20 +53,40 @@
                 <a href="donate.html" class="nav-link">Donate</a>
                 <a href="contact.html" class="nav-link">Contact</a>
             </div>
+            
             <div class="nav-toggle" id="nav-toggle">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
+            
         </div>
     </nav>
 
-    <!-- Main Content -->
+
+    <!-- 
+        ===== MAIN CONTENT AREA =====
+        Contains the events page specific content
+    -->
     <main>
-        <!-- Events Section -->
+
+        <!-- 
+            ===== EVENTS SECTION =====
+            Displays filterable list of upcoming events
+            Uses JavaScript for dynamic content loading and filtering
+        -->
         <section id="events" class="section active">
             <div class="container">
+                
+                <!-- Page heading -->
                 <h2 class="section-title">Upcoming Events</h2>
+                
+                <!-- 
+                    ===== EVENT FILTER BUTTONS =====
+                    Interactive buttons to filter events by category
+                    JavaScript handles the filtering functionality
+                    'active' class indicates current filter selection
+                -->
                 <div class="events-filter">
                     <button class="filter-btn active" data-filter="all">All Events</button>
                     <button class="filter-btn" data-filter="workshop">Workshops</button>
@@ -47,21 +94,53 @@
                     <button class="filter-btn" data-filter="fundraiser">Fundraisers</button>
                     <button class="filter-btn" data-filter="webinar">Webinars</button>
                 </div>
+                
+                <!-- 
+                    ===== EVENTS GRID CONTAINER =====
+                    This container will be populated dynamically with event cards
+                    JavaScript reads event data and creates HTML elements
+                    Uses CSS Grid for responsive layout
+                -->
                 <div class="events-grid" id="events-grid">
-                    <!-- Events will be dynamically loaded here -->
+                    <!-- Events will be dynamically loaded here by script.js -->
+                    <!-- Each event card will contain: title, date, type, description, registration link -->
                 </div>
+                
             </div>
         </section>
+        
     </main>
 
-    <!-- Footer -->
+    <!-- 
+        ===== FOOTER SECTION =====
+        Consistent footer across all pages with:
+        - Organization branding and mission statement
+        - Quick navigation links to all pages
+        - Resource links for key services
+        - Social media connection icons
+        - Legal compliance and copyright information
+    -->
     <footer class="footer">
         <div class="container">
+            
+            <!-- Main footer content organized in columns -->
             <div class="footer-content">
+                
+                <!-- 
+                    ===== BRAND SECTION =====
+                    Organization name and mission statement
+                    Establishes trust and purpose
+                -->
                 <div class="footer-section">
                     <h3>Career Granny</h3>
                     <p>Empowering the next generation of tech professionals through AI-powered career guidance and educational resources.</p>
                 </div>
+                
+                <!-- 
+                    ===== QUICK NAVIGATION =====
+                    Links to all main pages for easy site navigation
+                    Helps users explore different sections
+                -->
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
@@ -74,6 +153,12 @@
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
+                
+                <!-- 
+                    ===== RESOURCE SHORTCUTS =====
+                    Direct links to key services and tools
+                    Placeholder links for future functionality
+                -->
                 <div class="footer-section">
                     <h4>Resources</h4>
                     <ul>
@@ -83,6 +168,12 @@
                         <li><a href="#">Mentorship</a></li>
                     </ul>
                 </div>
+                
+                <!-- 
+                    ===== SOCIAL MEDIA CONNECTIONS =====
+                    Links to social media platforms
+                    Uses Font Awesome icons for brand recognition
+                -->
                 <div class="footer-section">
                     <h4>Connect</h4>
                     <div class="footer-social">
@@ -92,14 +183,31 @@
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
+                
             </div>
+            
+            <!-- 
+                ===== COPYRIGHT AND LEGAL =====
+                Copyright notice and non-profit status
+                Important for legal compliance and trust building
+            -->
             <div class="footer-bottom">
                 <p>&copy; 2025 Career Granny. All rights reserved. | 501(c)(3) Non-Profit Organization</p>
             </div>
+            
         </div>
     </footer>
 
-    <!-- JavaScript -->
+    <!-- 
+        ===== JAVASCRIPT INTEGRATION =====
+        Links to main script file containing:
+        - Event filtering functionality
+        - Dynamic event loading
+        - Navigation interactions
+        - Mobile menu toggle
+        - Event data management
+    -->
     <script src="js/script.js"></script>
+    
 </body>
 </html>

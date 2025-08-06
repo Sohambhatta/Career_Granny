@@ -1,22 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- 
+    ===== CONTACT PAGE =====
+    This page provides contact information and a contact form
+    - Company contact details (email, phone, address)
+    - Social media links
+    - Interactive contact form with validation
+    - Form fields with enhanced styling and accessibility
+-->
 <head>
+    <!-- Basic HTML5 document setup -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Page-specific title -->
     <title>Contact - Career Granny</title>
+    
+    <!-- Shared stylesheet -->
     <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Google Fonts setup for typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons throughout the page -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
 </head>
+
+
 <body>
-    <!-- Navigation -->
+
+    <!-- 
+        ===== NAVIGATION BAR =====
+        Same navigation structure as other pages
+        Note: 'active' class is on "Contact" link for this page
+    -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
+            
             <div class="nav-logo">
                 <h2>Career Granny</h2>
             </div>
+            
             <div class="nav-menu" id="nav-menu">
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="about.html" class="nav-link">About</a>
@@ -26,23 +53,43 @@
                 <a href="donate.html" class="nav-link">Donate</a>
                 <a href="contact.html" class="nav-link active">Contact</a>
             </div>
+            
             <div class="nav-toggle" id="nav-toggle">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
+            
         </div>
     </nav>
 
-    <!-- Main Content -->
+
+    <!-- 
+        ===== MAIN CONTENT AREA =====
+        Contains the contact page specific content
+    -->
     <main>
-        <!-- Contact Section -->
+
+        <!-- 
+            ===== CONTACT SECTION =====
+            Two-column layout with contact info and contact form
+        -->
         <section id="contact" class="section active">
             <div class="container">
+                
+                <!-- Page heading -->
                 <h2 class="section-title">Get In Touch</h2>
+                
                 <div class="contact-content">
+                    
+                    <!-- 
+                        ===== LEFT COLUMN: CONTACT INFORMATION =====
+                        Company contact details and social media links
+                    -->
                     <div class="contact-info">
                         <h3>Contact Information</h3>
+                        
+                        <!-- Email contact item -->
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
                             <div>
@@ -50,6 +97,8 @@
                                 <p>info@careergranny.org</p>
                             </div>
                         </div>
+                        
+                        <!-- Phone contact item -->
                         <div class="contact-item">
                             <i class="fas fa-phone"></i>
                             <div>
@@ -57,6 +106,8 @@
                                 <p>+1 (555) 123-4567</p>
                             </div>
                         </div>
+                        
+                        <!-- Address contact item -->
                         <div class="contact-item">
                             <i class="fas fa-map-marker-alt"></i>
                             <div>
@@ -64,48 +115,82 @@
                                 <p>123 Tech Street<br>Innovation City, IC 12345</p>
                             </div>
                         </div>
+                        
+                        <!-- Social media links -->
                         <div class="social-links">
                             <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
                             <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
                             <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
                             <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
                         </div>
+                        
                     </div>
+                    
+                    
+                    <!-- 
+                        ===== RIGHT COLUMN: CONTACT FORM =====
+                        Interactive form for users to send messages
+                        - Enhanced input styling with visible borders
+                        - Form validation (required fields)
+                        - Accessible labels and placeholders
+                    -->
                     <div class="contact-form-container">
+                        
                         <form class="contact-form" id="contact-form">
                             <h3>Send us a Message</h3>
+                            
+                            <!-- Name input field -->
                             <div class="form-group">
                                 <input type="text" id="name" name="name" placeholder="Your Name" required>
                                 <label for="name">Name</label>
                             </div>
+                            
+                            <!-- Email input field -->
                             <div class="form-group">
                                 <input type="email" id="email" name="email" placeholder="Your Email" required>
                                 <label for="email">Email</label>
                             </div>
+                            
+                            <!-- Subject input field -->
                             <div class="form-group">
                                 <input type="text" id="subject" name="subject" placeholder="Subject" required>
                                 <label for="subject">Subject</label>
                             </div>
+                            
+                            <!-- Message textarea field -->
                             <div class="form-group">
                                 <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
                                 <label for="message">Message</label>
                             </div>
+                            
+                            <!-- Submit button -->
                             <button type="submit" class="btn btn-primary">Send Message</button>
+                            
                         </form>
+                        
                     </div>
+                    
                 </div>
             </div>
         </section>
+        
     </main>
 
-    <!-- Footer -->
+
+    <!-- 
+        ===== SHARED FOOTER =====
+        Same footer structure used across all pages
+    -->
     <footer class="footer">
         <div class="container">
+            
             <div class="footer-content">
+                
                 <div class="footer-section">
                     <h3>Career Granny</h3>
                     <p>Empowering the next generation of tech professionals through AI-powered career guidance and educational resources.</p>
                 </div>
+                
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
@@ -118,6 +203,7 @@
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
+                
                 <div class="footer-section">
                     <h4>Resources</h4>
                     <ul>
@@ -127,6 +213,7 @@
                         <li><a href="#">Mentorship</a></li>
                     </ul>
                 </div>
+                
                 <div class="footer-section">
                     <h4>Connect</h4>
                     <div class="footer-social">
@@ -136,14 +223,19 @@
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
+                
             </div>
+            
             <div class="footer-bottom">
                 <p>&copy; 2025 Career Granny. All rights reserved. | 501(c)(3) Non-Profit Organization</p>
             </div>
+            
         </div>
     </footer>
 
-    <!-- JavaScript -->
+
+    <!-- JavaScript functionality -->
     <script src="js/script.js"></script>
+    
 </body>
 </html>

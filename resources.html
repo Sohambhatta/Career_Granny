@@ -1,22 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- 
+    ===== RESOURCES PAGE =====
+    This page showcases free career development resources
+    - Career assessment tools
+    - Educational guides and templates
+    - Interview preparation materials
+    - Industry insights and networking
+    - All resources designed for tech career development
+-->
 <head>
+    <!-- Basic HTML5 document setup -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Page-specific title -->
     <title>Resources - Career Granny</title>
+    
+    <!-- Shared stylesheet -->
     <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Google Fonts setup -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
 </head>
+
+
 <body>
-    <!-- Navigation -->
+
+    <!-- 
+        ===== NAVIGATION BAR =====
+        Same navigation structure as other pages
+        Note: 'active' class is on "Resources" link for this page
+    -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
+            
             <div class="nav-logo">
                 <h2>Career Granny</h2>
             </div>
+            
             <div class="nav-menu" id="nav-menu">
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="about.html" class="nav-link">About</a>
@@ -26,21 +54,46 @@
                 <a href="donate.html" class="nav-link">Donate</a>
                 <a href="contact.html" class="nav-link">Contact</a>
             </div>
+            
             <div class="nav-toggle" id="nav-toggle">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
+            
         </div>
     </nav>
 
-    <!-- Main Content -->
+
+    <!-- 
+        ===== MAIN CONTENT AREA =====
+        Contains the resources page specific content
+    -->
     <main>
-        <!-- Resources Section -->
+
+        <!-- 
+            ===== RESOURCES SECTION =====
+            Displays grid of available free resources
+            Each resource card has icon, description, and call-to-action
+        -->
         <section id="resources" class="section active">
             <div class="container">
+                
+                <!-- Page heading -->
                 <h2 class="section-title">Free Resources</h2>
+                
+                <!-- 
+                    ===== RESOURCES GRID =====
+                    Grid layout displaying all available resources
+                    Each card follows consistent structure: icon, title, description, button
+                -->
                 <div class="resources-grid">
+                    
+                    <!-- 
+                        ===== CAREER ASSESSMENT TOOL =====
+                        AI-powered career path discovery
+                        Helps users find suitable tech careers
+                    -->
                     <div class="resource-card">
                         <div class="resource-icon">
                             <i class="fas fa-graduation-cap"></i>
@@ -49,6 +102,12 @@
                         <p>Take our AI-powered assessment to discover your ideal tech career path based on your skills and interests.</p>
                         <button class="btn btn-outline">Take Assessment</button>
                     </div>
+                    
+                    <!-- 
+                        ===== SKILL DEVELOPMENT GUIDES =====
+                        Educational content for tech skills
+                        Covers various specializations and career paths
+                    -->
                     <div class="resource-card">
                         <div class="resource-icon">
                             <i class="fas fa-code"></i>
@@ -57,6 +116,12 @@
                         <p>Comprehensive guides covering essential skills for hundreds of different tech careers and specializations.</p>
                         <button class="btn btn-outline">Browse Guides</button>
                     </div>
+                    
+                    <!-- 
+                        ===== RESUME TEMPLATES =====
+                        Professional resume building tools
+                        Optimized specifically for tech industry
+                    -->
                     <div class="resource-card">
                         <div class="resource-icon">
                             <i class="fas fa-file-alt"></i>
@@ -65,6 +130,12 @@
                         <p>Professional resume templates optimized for tech positions, with tips for highlighting your unique strengths.</p>
                         <button class="btn btn-outline">Download Templates</button>
                     </div>
+                    
+                    <!-- 
+                        ===== INTERVIEW PREPARATION =====
+                        Technical interview training materials
+                        Video tutorials and practice questions
+                    -->
                     <div class="resource-card">
                         <div class="resource-icon">
                             <i class="fas fa-video"></i>
@@ -73,6 +144,12 @@
                         <p>Video tutorials and practice questions to help you ace technical interviews and land your dream job.</p>
                         <button class="btn btn-outline">Start Prep</button>
                     </div>
+                    
+                    <!-- 
+                        ===== INDUSTRY INSIGHTS =====
+                        Market trends and networking opportunities
+                        Helps users understand tech industry landscape
+                    -->
                     <div class="resource-card">
                         <div class="resource-icon">
                             <i class="fas fa-network-wired"></i>
@@ -81,6 +158,12 @@
                         <p>Stay updated with the latest tech trends, salary data, and job market analysis from our research team.</p>
                         <button class="btn btn-outline">View Insights</button>
                     </div>
+                    
+                    <!-- 
+                        ===== MENTORSHIP PROGRAM =====
+                        Personal guidance from experienced professionals
+                        One-on-one career support and networking
+                    -->
                     <div class="resource-card">
                         <div class="resource-icon">
                             <i class="fas fa-users"></i>
@@ -89,19 +172,44 @@
                         <p>Connect with experienced tech professionals for personalized guidance and career mentorship.</p>
                         <button class="btn btn-outline">Find Mentor</button>
                     </div>
+                    
                 </div>
+                
             </div>
         </section>
+        
     </main>
 
-    <!-- Footer -->
+    <!-- 
+        ===== FOOTER SECTION =====
+        Consistent footer across all pages with:
+        - Organization branding and mission statement
+        - Quick navigation links to all pages
+        - Resource links for key services
+        - Social media connection icons
+        - Legal compliance and copyright information
+    -->
     <footer class="footer">
         <div class="container">
+            
+            <!-- Main footer content organized in columns -->
             <div class="footer-content">
+                
+                <!-- 
+                    ===== BRAND SECTION =====
+                    Organization name and mission statement
+                    Establishes trust and purpose
+                -->
                 <div class="footer-section">
                     <h3>Career Granny</h3>
                     <p>Empowering the next generation of tech professionals through AI-powered career guidance and educational resources.</p>
                 </div>
+                
+                <!-- 
+                    ===== QUICK NAVIGATION =====
+                    Links to all main pages for easy site navigation
+                    Helps users explore different sections
+                -->
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
@@ -114,6 +222,12 @@
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
+                
+                <!-- 
+                    ===== RESOURCE SHORTCUTS =====
+                    Direct links to key services and tools
+                    Mirrors the main resource cards for easy access
+                -->
                 <div class="footer-section">
                     <h4>Resources</h4>
                     <ul>
@@ -123,6 +237,12 @@
                         <li><a href="#">Mentorship</a></li>
                     </ul>
                 </div>
+                
+                <!-- 
+                    ===== SOCIAL MEDIA CONNECTIONS =====
+                    Links to social media platforms
+                    Uses Font Awesome icons for brand recognition
+                -->
                 <div class="footer-section">
                     <h4>Connect</h4>
                     <div class="footer-social">
@@ -132,14 +252,30 @@
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
+                
             </div>
+            
+            <!-- 
+                ===== COPYRIGHT AND LEGAL =====
+                Copyright notice and non-profit status
+                Important for legal compliance and trust building
+            -->
             <div class="footer-bottom">
                 <p>&copy; 2025 Career Granny. All rights reserved. | 501(c)(3) Non-Profit Organization</p>
             </div>
+            
         </div>
     </footer>
 
-    <!-- JavaScript -->
+    <!-- 
+        ===== JAVASCRIPT INTEGRATION =====
+        Links to main script file containing:
+        - Navigation interactions
+        - Mobile menu toggle
+        - Resource card interactions
+        - Button click handlers
+    -->
     <script src="js/script.js"></script>
+    
 </body>
 </html>

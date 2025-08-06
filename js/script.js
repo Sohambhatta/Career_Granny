@@ -1,42 +1,96 @@
 /**
+ * =====================================
  * CAREER GRANNY WEBSITE JAVASCRIPT
+ * =====================================
  * 
  * This file contains all the interactive functionality for the Career Granny website.
- * Features include:
+ * It handles dynamic content, user interactions, animations, and responsive behavior.
+ * 
+ * MAIN FEATURES:
  * - Smooth navigation between sections
- * - Animated statistics counter
- * - Event carousel functionality
- * - Search functionality
- * - Form handling
- * - Dynamic content loading
- * - Responsive mobile menu
- * - Typewriter effect
- * - Scroll animations
+ * - Animated statistics counters with scroll triggers
+ * - Event filtering and dynamic grid population
+ * - Intelligent search functionality across careers/skills/resources
+ * - Contact form validation and submission handling
+ * - Responsive mobile navigation menu
+ * - Typewriter text animation effects
+ * - Scroll-based animations and reveal effects
+ * - Dynamic content loading from data arrays
+ * 
+ * ORGANIZATION:
+ * 1. Global Variables and Data Constants
+ * 2. DOM Content Loaded Event Handler
+ * 3. Navigation System Functions
+ * 4. Search Functionality
+ * 5. Event Management System
+ * 6. Animation Functions (Typewriter, Counters, etc.)
+ * 7. Form Handling and Validation
+ * 8. Utility Functions and Helpers
+ * 9. Responsive Design Handlers
+ * 10. Performance Optimization Functions
  * 
  * @author Career Granny Development Team
- * @version 1.0.0
+ * @version 2.0.0
+ * @lastUpdated August 2025
+ * @requires Modern browser with ES6+ support
  */
 
-// ===== GLOBAL VARIABLES AND CONSTANTS =====
+
+/* 
+=======================================
+1. GLOBAL VARIABLES AND DATA CONSTANTS
+=======================================
+
+These constants store all the dynamic content data and configuration
+values used throughout the website. This approach makes the content
+easily maintainable and allows for future integration with a CMS or API.
+*/
+
+/**
+ * SEARCH_DATA - Comprehensive search database
+ * Contains searchable items across different categories (careers, skills, resources, events)
+ * Each item includes title, type classification, and descriptive text
+ * Used by the intelligent search functionality to provide relevant results
+ */
 const SEARCH_DATA = [
+    // Career path options
     { title: 'Software Engineer', type: 'career', description: 'Design and develop software applications' },
     { title: 'Data Scientist', type: 'career', description: 'Analyze complex data to help companies make decisions' },
     { title: 'UX Designer', type: 'career', description: 'Create user-friendly interfaces and experiences' },
     { title: 'DevOps Engineer', type: 'career', description: 'Bridge development and operations teams' },
     { title: 'Product Manager', type: 'career', description: 'Guide product development from conception to launch' },
     { title: 'Cybersecurity Analyst', type: 'career', description: 'Protect organizations from digital threats' },
+    
+    // Technical skills and technologies
     { title: 'JavaScript', type: 'skill', description: 'Programming language for web development' },
     { title: 'Python', type: 'skill', description: 'Versatile programming language' },
     { title: 'Machine Learning', type: 'skill', description: 'AI technique for pattern recognition' },
     { title: 'Cloud Computing', type: 'skill', description: 'Distributed computing over the internet' },
+    
+    // Educational resources and guides
     { title: 'Resume Writing', type: 'resource', description: 'Guide to creating effective resumes' },
     { title: 'Interview Preparation', type: 'resource', description: 'Tips for acing technical interviews' },
     { title: 'Coding Bootcamps', type: 'resource', description: 'Intensive programming courses' },
+    
+    // Upcoming events and workshops
     { title: 'Tech Career Fair', type: 'event', description: 'Networking event with top tech companies' },
     { title: 'AI Workshop', type: 'event', description: 'Hands-on artificial intelligence workshop' },
     { title: 'Women in Tech Meetup', type: 'event', description: 'Networking for women in technology' }
 ];
 
+/**
+ * EVENTS_DATA - Complete events database
+ * Contains all event information including dates, types, descriptions, and status
+ * Used to dynamically populate the events page and enable filtering functionality
+ * Each event includes:
+ * - Unique ID for tracking and linking
+ * - Display title and formatted date
+ * - Type classification for filtering (workshop, networking, fundraiser, webinar)
+ * - Registration status for user guidance
+ * - Detailed description for user decision-making
+ * - Emoji icon for visual appeal
+ * - Link destination for registration/more info
+ */
 const EVENTS_DATA = [
     {
         id: 1,
@@ -120,74 +174,150 @@ const EVENTS_DATA = [
     }
 ];
 
-let currentCarouselIndex = 0;
-let isAnimating = false;
+/**
+ * Global state variables for managing UI interactions
+ * These variables track the current state of various interactive components
+ */
+let currentCarouselIndex = 0;  // Tracks current position in image carousel
+let isAnimating = false;       // Prevents rapid-fire animations during transitions
 
-// ===== DOM CONTENT LOADED EVENT =====
+
+/* 
+=======================================
+2. DOM CONTENT LOADED EVENT HANDLER
+=======================================
+
+This is the main entry point for all JavaScript functionality.
+It ensures the DOM is fully loaded before initializing any interactive features.
+*/
+
+/**
+ * Main DOMContentLoaded Event Listener
+ * Waits for the HTML document to be completely loaded and parsed
+ * before executing any JavaScript functionality. This prevents errors
+ * from trying to access elements that don't exist yet.
+ */
 document.addEventListener('DOMContentLoaded', function() {
     initializeWebsite();
 });
 
 /**
- * Initialize all website functionality
+ * Master initialization function
+ * Coordinates the setup of all website features in the correct order
+ * Each setup function handles a specific aspect of the website functionality
+ * 
+ * INITIALIZATION ORDER:
+ * 1. Navigation system (must be first for page routing)
+ * 2. Search functionality (independent feature)
+ * 3. Image carousel (if present on page)
+ * 4. Event filtering system (for events page)
+ * 5. Contact form validation (for contact page)
+ * 6. Scroll-based animations (visual enhancements)
+ * 7. Statistics counter animations (for impact page)
+ * 8. Typewriter text effects (for hero sections)
+ * 9. Dynamic event loading (populates events grid)
+ * 10. Default page display (shows home section)
  */
 function initializeWebsite() {
+    // Core navigation functionality - must be initialized first
     setupNavigation();
-    setupSearch();
-    setupCarousel();
-    setupEventFilters();
-    setupContactForm();
-    setupScrollAnimations();
-    setupStatsCounter();
-    setupTypewriterEffect();
-    loadEvents();
     
-    // Show home section by default
+    // Search functionality - independent of other systems
+    setupSearch();
+    
+    // Visual components that enhance user experience
+    setupCarousel();              // Image slideshow functionality
+    setupEventFilters();          // Event category filtering
+    setupContactForm();           // Form validation and submission
+    setupScrollAnimations();      // Reveal animations on scroll
+    setupStatsCounter();          // Animated number counters
+    setupTypewriterEffect();      // Typing animation for headlines
+    
+    // Content population - should come after UI setup
+    loadEvents();                 // Dynamically populate events grid
+    
+    // Initial page state - display home section by default
     showSection('home');
 }
 
-// ===== NAVIGATION FUNCTIONALITY =====
+
+/* 
+=======================================
+3. NAVIGATION SYSTEM FUNCTIONS
+=======================================
+
+The navigation system handles multi-page navigation, mobile menu functionality,
+scroll-based navbar styling, and smooth section transitions. It provides a
+seamless user experience across all device sizes.
+*/
 
 /**
  * Set up navigation menu and mobile toggle
+ * 
+ * FUNCTIONALITY PROVIDED:
+ * - Mobile hamburger menu toggle
+ * - Automatic menu closing on link clicks  
+ * - Scroll-based navbar styling changes
+ * - Click-outside-to-close behavior
+ * - Smooth transitions and animations
+ * 
+ * RESPONSIVE BEHAVIOR:
+ * - Desktop: Horizontal menu always visible
+ * - Mobile: Hamburger button toggles slide-down menu
+ * - Tablet: Adapts based on screen width breakpoints
  */
 function setupNavigation() {
-    const navToggle = document.getElementById('nav-toggle');
-    const navMenu = document.getElementById('nav-menu');
-    const navLinks = document.querySelectorAll('.nav-link');
-    const navbar = document.getElementById('navbar');
+    // Get navigation DOM elements
+    const navToggle = document.getElementById('nav-toggle');      // Hamburger menu button
+    const navMenu = document.getElementById('nav-menu');          // Navigation links container
+    const navLinks = document.querySelectorAll('.nav-link');      // Individual navigation links
+    const navbar = document.getElementById('navbar');             // Main navigation bar
     
-    // Mobile menu toggle
+    // ===== MOBILE MENU TOGGLE FUNCTIONALITY =====
+    // Toggle mobile menu visibility when hamburger button is clicked
     if (navToggle && navMenu) {
         navToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-            navToggle.classList.toggle('active');
+            // Toggle active states for both menu and button
+            navMenu.classList.toggle('active');    // Shows/hides mobile menu
+            navToggle.classList.toggle('active');  // Animates hamburger to X
         });
     }
     
-    // Close mobile menu when clicking on nav links (but allow normal navigation)
+    // ===== NAVIGATION LINK CLICK HANDLING =====
+    // Close mobile menu when any navigation link is clicked
+    // This ensures smooth navigation flow on mobile devices
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            // Close mobile menu if open
+            // Check if mobile menu is currently open
             if (navMenu.classList.contains('active')) {
+                // Close mobile menu and reset hamburger animation
                 navMenu.classList.remove('active');
                 navToggle.classList.remove('active');
             }
+            // Note: Normal navigation continues after this (handled by browser)
         });
     });
     
-    // Scroll effect for navbar
+    // ===== SCROLL-BASED NAVBAR STYLING =====
+    // Changes navbar appearance based on scroll position
+    // Provides visual feedback and improves readability
     window.addEventListener('scroll', function() {
         if (window.scrollY > 100) {
-            navbar.classList.add('scrolled');
+            // Add 'scrolled' class when user scrolls down
+            navbar.classList.add('scrolled');    // Triggers enhanced backdrop blur and shadow
         } else {
-            navbar.classList.remove('scrolled');
+            // Remove 'scrolled' class when back at top
+            navbar.classList.remove('scrolled'); // Returns to default subtle styling
         }
     });
     
-    // Close mobile menu when clicking outside
+    // ===== CLICK-OUTSIDE-TO-CLOSE BEHAVIOR =====
+    // Closes mobile menu when user clicks outside the navigation area
+    // Improves usability by providing intuitive menu dismissal
     document.addEventListener('click', function(e) {
+        // Check if click was outside both the menu and toggle button
         if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
+            // Close mobile menu and reset states
             navMenu.classList.remove('active');
             navToggle.classList.remove('active');
         }
@@ -196,12 +326,30 @@ function setupNavigation() {
 
 /**
  * Show specific section and hide others
- * @param {string} sectionId - The ID of the section to show
+ * 
+ * This function manages the single-page application (SPA) behavior
+ * by showing only the requested section while hiding all others.
+ * It provides smooth transitions and proper state management.
+ * 
+ * @param {string} sectionId - The ID of the section to display
+ * 
+ * USAGE EXAMPLES:
+ * - showSection('home') - Display home page content
+ * - showSection('about') - Display about page content
+ * - showSection('contact') - Display contact page content
+ * 
+ * TRANSITION BEHAVIOR:
+ * 1. Hide all sections with fade-out animation
+ * 2. Show target section with fade-in animation
+ * 3. Update navigation active states
+ * 4. Scroll to top for better user experience
  */
 function showSection(sectionId) {
+    // Get all page sections and the target section
     const sections = document.querySelectorAll('.section');
     const targetSection = document.getElementById(sectionId);
     
+    // Exit early if target section doesn't exist (error prevention)
     if (!targetSection) return;
     
     // Hide all sections

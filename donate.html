@@ -1,22 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- 
+    ===== DONATION PAGE =====
+    This page encourages donations to support Career Granny's mission
+    - Explains the impact of donations
+    - Links to external HackClub donation platform
+    - 501(c)(3) non-profit status highlighted
+    - Call-to-action for financial support
+-->
 <head>
+    <!-- Basic HTML5 document setup -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Page-specific title -->
     <title>Donate - Career Granny</title>
+    
+    <!-- Shared stylesheet -->
     <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Google Fonts setup -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
 </head>
+
+
 <body>
-    <!-- Navigation -->
+
+    <!-- 
+        ===== NAVIGATION BAR =====
+        Same navigation structure as other pages
+        Note: 'active' class is on "Donate" link for this page
+    -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
+            
             <div class="nav-logo">
                 <h2>Career Granny</h2>
             </div>
+            
             <div class="nav-menu" id="nav-menu">
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="about.html" class="nav-link">About</a>
@@ -26,49 +53,97 @@
                 <a href="donate.html" class="nav-link active">Donate</a>
                 <a href="contact.html" class="nav-link">Contact</a>
             </div>
+            
             <div class="nav-toggle" id="nav-toggle">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
+            
         </div>
     </nav>
 
-    <!-- Main Content -->
+
+    <!-- 
+        ===== MAIN CONTENT AREA =====
+        Contains the donation page specific content
+    -->
     <main>
-        <!-- Donate Section -->
+
+        <!-- 
+            ===== DONATION SECTION =====
+            Persuasive content about the impact of donations
+            Links to external donation platform (HackClub)
+        -->
         <section id="donate" class="section active">
             <div class="container">
+                
+                <!-- Page heading -->
                 <h2 class="section-title">Donate</h2>
+                
                 <div class="donate-content">
+                    
+                    <!-- 
+                        ===== DONATION APPEAL TEXT =====
+                        Explains the impact and importance of donations
+                        Highlights 501(c)(3) non-profit status
+                    -->
                     <div class="donate-text">
+                        
+                        <!-- Paragraph 1: Direct impact statement -->
                         <p>Your generous donation helps us continue providing free AI-powered career counseling, educational resources, and workshops to students across the nation. As a 501(c)(3) non-profit organization, every contribution directly supports our mission to bridge the gap between students and successful tech careers.</p>
                         
+                        <!-- Paragraph 2: Specific use cases for donations -->
                         <p>With your support, we can expand our reach, develop new resources, and help even more students discover their potential in the technology industry. Whether it's funding a new workshop, supporting our mentorship program, or helping us maintain our free online tools, your donation makes a real difference in the lives of aspiring tech professionals.</p>
                         
+                        <!-- Paragraph 3: Call to action with inclusive message -->
                         <p>Join us in empowering the next generation of tech leaders. Together, we can create a more inclusive and accessible pathway to technology careers for students from all backgrounds.</p>
+                        
                     </div>
                     
+                    <!-- 
+                        ===== DONATION BUTTON SECTION =====
+                        Call-to-action button linking to HackClub donation platform
+                        Includes tax-deductible disclaimer
+                    -->
                     <div class="donate-button-container">
+                        
+                        <!-- 
+                            Primary donation button 
+                            Links to external HackClub donation platform
+                            Opens in new tab for better user experience
+                        -->
                         <a href="https://hcb.hackclub.com/donations/start/career-granny" target="_blank" class="btn btn-primary donate-btn">
                             <i class="fas fa-heart"></i>
                             Donate Now
                         </a>
+                        
+                        <!-- Tax-deductible disclaimer for legal compliance -->
                         <p class="donate-note">Your donation is tax-deductible. You will receive a receipt for your records.</p>
+                        
                     </div>
+                    
                 </div>
             </div>
         </section>
+        
     </main>
 
-    <!-- Footer -->
+
+    <!-- 
+        ===== SHARED FOOTER =====
+        Same footer structure used across all pages
+    -->
     <footer class="footer">
         <div class="container">
+            
             <div class="footer-content">
+                
                 <div class="footer-section">
                     <h3>Career Granny</h3>
                     <p>Empowering the next generation of tech professionals through AI-powered career guidance and educational resources.</p>
                 </div>
+                
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
@@ -81,6 +156,7 @@
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
+                
                 <div class="footer-section">
                     <h4>Resources</h4>
                     <ul>
@@ -90,6 +166,7 @@
                         <li><a href="#">Mentorship</a></li>
                     </ul>
                 </div>
+                
                 <div class="footer-section">
                     <h4>Connect</h4>
                     <div class="footer-social">
@@ -99,14 +176,19 @@
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
+                
             </div>
+            
             <div class="footer-bottom">
                 <p>&copy; 2025 Career Granny. All rights reserved. | 501(c)(3) Non-Profit Organization</p>
             </div>
+            
         </div>
     </footer>
 
-    <!-- JavaScript -->
+
+    <!-- JavaScript functionality -->
     <script src="js/script.js"></script>
+    
 </body>
 </html>

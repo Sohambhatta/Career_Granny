@@ -1,22 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- 
+    ===== IMPACT PAGE =====
+    This page showcases the organization's achievements and metrics
+    - Statistical counters with animated numbers
+    - Impact metrics across different categories
+    - Visual representation of organizational success
+    - Builds credibility and demonstrates effectiveness
+-->
 <head>
+    <!-- Basic HTML5 document setup -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Page-specific title -->
     <title>Impact - Career Granny</title>
+    
+    <!-- Shared stylesheet -->
     <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Google Fonts setup -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
 </head>
+
+
 <body>
-    <!-- Navigation -->
+
+    <!-- 
+        ===== NAVIGATION BAR =====
+        Same navigation structure as other pages
+        Note: 'active' class is on "Impact" link for this page
+    -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
+            
             <div class="nav-logo">
                 <h2>Career Granny</h2>
             </div>
+            
             <div class="nav-menu" id="nav-menu">
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="about.html" class="nav-link">About</a>
@@ -26,56 +53,135 @@
                 <a href="donate.html" class="nav-link">Donate</a>
                 <a href="contact.html" class="nav-link">Contact</a>
             </div>
+            
             <div class="nav-toggle" id="nav-toggle">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
+            
         </div>
     </nav>
 
-    <!-- Main Content -->
+
+    <!-- 
+        ===== MAIN CONTENT AREA =====
+        Contains the impact page specific content
+    -->
     <main>
-        <!-- Stats Section -->
+
+        <!-- 
+            ===== STATISTICS SECTION =====
+            Displays key impact metrics with animated counters
+            Numbers animate from 0 to target value when page loads
+            Demonstrates organizational effectiveness and reach
+        -->
         <section id="stats" class="section active">
+            
+            <!-- Background container for visual styling -->
             <div class="stats-background">
                 <div class="container">
+                    
+                    <!-- Page heading -->
                     <h2 class="section-title">Our Impact</h2>
+                    
+                    <!-- 
+                        ===== STATISTICS GRID =====
+                        Grid layout displaying key performance metrics
+                        Each stat card includes animated counter and descriptive label
+                        JavaScript handles the number animation effects
+                    -->
                     <div class="stats-grid-new">
+                        
+                        <!-- 
+                            ===== STUDENTS HELPED METRIC =====
+                            Primary impact indicator showing reach
+                            Animated counter demonstrates scale of assistance
+                        -->
                         <div class="stat-card">
                             <div class="stat-number" data-target="15000">0</div>
                             <div class="stat-label">Students Helped</div>
                         </div>
+                        
+                        <!-- 
+                            ===== CAREER PATHS METRIC =====
+                            Shows diversity of career guidance provided
+                            Indicates comprehensive coverage of tech fields
+                        -->
                         <div class="stat-card">
                             <div class="stat-number" data-target="250">0</div>
                             <div class="stat-label">Career Paths</div>
                         </div>
+                        
+                        <!-- 
+                            ===== PARTNER SCHOOLS METRIC =====
+                            Demonstrates institutional relationships
+                            Shows educational network and credibility
+                        -->
                         <div class="stat-card">
                             <div class="stat-number" data-target="50">0</div>
                             <div class="stat-label">Partner Schools</div>
                         </div>
+                        
+                        <!-- 
+                            ===== EVENTS HELD METRIC =====
+                            Shows active community engagement
+                            Indicates consistent programming and outreach
+                        -->
                         <div class="stat-card">
                             <div class="stat-number" data-target="120">0</div>
                             <div class="stat-label">Events Held</div>
                         </div>
+                        
+                        <!-- 
+                            ===== VOLUNTEERS METRIC =====
+                            Demonstrates community support and involvement
+                            Shows scale of organizational participation
+                        -->
                         <div class="stat-card">
                             <div class="stat-number" data-target="500">0</div>
                             <div class="stat-label">Volunteers</div>
                         </div>
+                        
                     </div>
+                    
                 </div>
             </div>
+            
         </section>
+        
     </main>
 
-    <!-- Footer -->
+    <!-- 
+        ===== FOOTER SECTION =====
+        Consistent footer across all pages with:
+        - Organization branding and mission statement
+        - Quick navigation links to all pages
+        - Resource links for key services
+        - Social media connection icons
+        - Legal compliance and copyright information
+    -->
     <footer class="footer">
         <div class="container">
+            
+            <!-- Main footer content organized in columns -->
             <div class="footer-content">
+                
+                <!-- 
+                    ===== BRAND SECTION =====
+                    Organization name and mission statement
+                    Establishes trust and purpose
+                -->
                 <div class="footer-section">
                     <h3>Career Granny</h3>
                     <p>Empowering the next generation of tech professionals through AI-powered career guidance and educational resources.</p>
                 </div>
+                
+                <!-- 
+                    ===== QUICK NAVIGATION =====
+                    Links to all main pages for easy site navigation
+                    Helps users explore different sections
+                -->
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
@@ -88,6 +194,12 @@
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
+                
+                <!-- 
+                    ===== RESOURCE SHORTCUTS =====
+                    Direct links to key services and tools
+                    Provides quick access to main functionality
+                -->
                 <div class="footer-section">
                     <h4>Resources</h4>
                     <ul>
@@ -97,6 +209,12 @@
                         <li><a href="#">Mentorship</a></li>
                     </ul>
                 </div>
+                
+                <!-- 
+                    ===== SOCIAL MEDIA CONNECTIONS =====
+                    Links to social media platforms
+                    Uses Font Awesome icons for brand recognition
+                -->
                 <div class="footer-section">
                     <h4>Connect</h4>
                     <div class="footer-social">
@@ -106,14 +224,30 @@
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
+                
             </div>
+            
+            <!-- 
+                ===== COPYRIGHT AND LEGAL =====
+                Copyright notice and non-profit status
+                Important for legal compliance and trust building
+            -->
             <div class="footer-bottom">
                 <p>&copy; 2025 Career Granny. All rights reserved. | 501(c)(3) Non-Profit Organization</p>
             </div>
+            
         </div>
     </footer>
 
-    <!-- JavaScript -->
+    <!-- 
+        ===== JAVASCRIPT INTEGRATION =====
+        Links to main script file containing:
+        - Animated counter functionality for stats
+        - Navigation interactions
+        - Mobile menu toggle
+        - Number animation effects
+    -->
     <script src="js/script.js"></script>
+    
 </body>
 </html>
