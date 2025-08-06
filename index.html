@@ -1,22 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- 
+    ===== DOCUMENT HEAD SECTION =====
+    This section contains metadata, stylesheets, and external resources
+    that need to be loaded before the page content renders.
+-->
 <head>
+    <!-- Basic HTML5 document setup -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Page title that appears in browser tab -->
     <title>Career Granny - AI Tech Career Counselor</title>
+    
+    <!-- Main stylesheet - contains all our custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Google Fonts preconnect for faster loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Inter font family - modern, clean typography -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome icons - provides all the icons used throughout the site -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
 </head>
+
+
+<!-- 
+    ===== DOCUMENT BODY =====
+    Contains all the visible content and interactive elements
+-->
 <body>
-    <!-- Navigation -->
+
+    <!-- 
+        ===== NAVIGATION BAR =====
+        Responsive navigation that works on desktop and mobile
+        - Contains logo and main navigation links
+        - Has mobile hamburger menu functionality
+    -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
+            
+            <!-- Logo/Brand name -->
             <div class="nav-logo">
                 <h2>Career Granny</h2>
             </div>
+            
+            <!-- Main navigation menu -->
             <div class="nav-menu" id="nav-menu">
                 <a href="index.html" class="nav-link active">Home</a>
                 <a href="about.html" class="nav-link">About</a>
@@ -26,29 +59,53 @@
                 <a href="donate.html" class="nav-link">Donate</a>
                 <a href="contact.html" class="nav-link">Contact</a>
             </div>
+            
+            <!-- Mobile hamburger menu toggle (hidden on desktop) -->
             <div class="nav-toggle" id="nav-toggle">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
+            
         </div>
     </nav>
 
-    <!-- Search Bar -->
+
+    <!-- 
+        ===== SEARCH FUNCTIONALITY =====
+        Global search bar that appears when triggered
+        - Allows users to search for careers, skills, and resources
+        - Has dropdown results functionality
+    -->
     <div class="search-container" id="search-container">
         <div class="search-box">
             <input type="text" id="search-input" placeholder="Search for careers, skills, resources...">
             <button id="search-btn"><i class="fas fa-search"></i></button>
         </div>
+        
+        <!-- Search results dropdown (populated by JavaScript) -->
         <div class="search-results" id="search-results"></div>
     </div>
 
-    <!-- Main Content -->
+
+    <!-- 
+        ===== MAIN CONTENT AREA =====
+        Contains all the page sections and content
+    -->
     <main>
-        <!-- Home Section -->
+
+        <!-- 
+            ===== HOME PAGE HERO SECTION =====
+            The main landing area with background image and call-to-action
+        -->
         <section id="home" class="section active">
+            
+            <!-- Hero area with full-screen background -->
             <div class="hero">
+                
+                <!-- Background image with cinematic effects -->
                 <div class="hero-background">
+                    <!-- Floating shapes (currently hidden) -->
                     <div class="floating-shapes">
                         <div class="shape shape-1"></div>
                         <div class="shape shape-2"></div>
@@ -56,45 +113,81 @@
                         <div class="shape shape-4"></div>
                     </div>
                 </div>
+                
+                <!-- Main hero content overlaid on background -->
                 <div class="hero-content">
+                    
+                    <!-- Main headline with gradient text and typewriter effect -->
                     <h1 class="hero-title">
                         <span class="gradient-text">Empowering Tech Careers</span><br>
                         <span class="typewriter" id="typewriter">One Student at a Time</span>
                     </h1>
+                    
+                    <!-- Hero description paragraph -->
                     <p class="hero-description">
                         Career Granny is a 501(c)(3) non-profit organization providing free AI-powered career counseling, 
                         skill assessments, and resources to help students become competitive candidates in the tech job market.
                     </p>
+                    
+                    <!-- Call-to-action buttons -->
                     <div class="hero-buttons">
                         <a href="about.html" class="btn btn-primary">Learn More</a>
                         <a href="events.html" class="btn btn-secondary">Join Events</a>
                     </div>
+                    
                 </div>
             </div>
 
-            <!-- Our Mission Section -->
+
+            <!-- 
+                ===== MISSION PREVIEW SECTION =====
+                Brief overview of the organization's mission
+                - Provides a taste of the full About page content
+                - Includes CTA button to learn more
+            -->
             <div class="mission-preview">
                 <div class="container">
+                    
+                    <!-- Section heading -->
                     <h2 class="section-title">Our Mission</h2>
+                    
                     <div class="mission-content">
+                        
+                        <!-- Mission statement preview -->
                         <p>Career Granny started as a free AI tech career counselor tool and has evolved into a comprehensive 501(c)(3) non-profit organization. We're dedicated to bridging the gap between students and successful tech careers through personalized guidance, skill assessments, and educational resources.</p>
+                        
+                        <!-- CTA button to full About page -->
                         <div class="mission-button">
                             <a href="about.html" class="btn btn-primary">Learn More About Us</a>
                         </div>
+                        
                     </div>
                 </div>
             </div>
+            
         </section>
     </main>
 
-    <!-- Footer -->
+
+    <!-- 
+        ===== FOOTER SECTION =====
+        Site-wide footer with links, social media, and legal info
+        - Organized into multiple columns for different types of links
+        - Includes social media icons and copyright information
+    -->
     <footer class="footer">
         <div class="container">
+            
+            <!-- Main footer content grid -->
             <div class="footer-content">
+                
+                <!-- Company description column -->
                 <div class="footer-section">
                     <h3>Career Granny</h3>
                     <p>Empowering the next generation of tech professionals through AI-powered career guidance and educational resources.</p>
                 </div>
+                
+                <!-- Quick navigation links column -->
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
@@ -107,6 +200,8 @@
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
+                
+                <!-- Resources links column -->
                 <div class="footer-section">
                     <h4>Resources</h4>
                     <ul>
@@ -116,6 +211,8 @@
                         <li><a href="#">Mentorship</a></li>
                     </ul>
                 </div>
+                
+                <!-- Social media links column -->
                 <div class="footer-section">
                     <h4>Connect</h4>
                     <div class="footer-social">
@@ -125,14 +222,27 @@
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
+                
             </div>
+            
+            <!-- Copyright and legal information -->
             <div class="footer-bottom">
                 <p>&copy; 2025 Career Granny. All rights reserved. | 501(c)(3) Non-Profit Organization</p>
             </div>
+            
         </div>
     </footer>
 
-    <!-- JavaScript -->
+
+    <!-- 
+        ===== JAVASCRIPT INITIALIZATION =====
+        Main JavaScript file that handles all interactive functionality
+        - Navigation behavior
+        - Search functionality  
+        - Animations and effects
+        - Form handling
+    -->
     <script src="js/script.js"></script>
+    
 </body>
 </html>

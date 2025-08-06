@@ -1,81 +1,179 @@
-/* ===================================
-   CAREER GRANNY WEBSITE STYLES
-   A modern, animated website for a 501(c)(3) non-profit
-   Theme: Black, Purple, with cool background designs
-   =================================== */
+/**
+ * =====================================
+ * CAREER GRANNY WEBSITE STYLESHEET
+ * =====================================
+ * 
+ * A comprehensive, modern CSS file for Career Granny's non-profit website.
+ * This stylesheet provides professional styling for a tech career counseling
+ * organization with emphasis on accessibility, responsiveness, and modern design.
+ * 
+ * AUTHOR: Career Granny Development Team
+ * VERSION: 2.0.0
+ * LAST UPDATED: August 2025
+ * 
+ * ORGANIZATION:
+ * 1. CSS Custom Properties (CSS Variables)
+ * 2. Reset & Base Styles
+ * 3. Typography & Utility Classes
+ * 4. Navigation & Header
+ * 5. Search Functionality
+ * 6. Hero Section & Backgrounds
+ * 7. Content Sections (About, Events, Resources, etc.)
+ * 8. Forms & Interactive Elements
+ * 9. Footer
+ * 10. Animations & Keyframes
+ * 11. Media Queries & Responsiveness
+ * 
+ * DESIGN PRINCIPLES:
+ * - Mobile-first responsive design
+ * - Semantic color naming with CSS custom properties
+ * - Consistent spacing and typography scales
+ * - Smooth animations and transitions
+ * - High contrast for accessibility
+ * - Modern CSS features (Grid, Flexbox, custom properties)
+ */
 
-/* ===== RESET & BASE STYLES ===== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
+/* 
+=======================================
+1. CSS CUSTOM PROPERTIES (VARIABLES)
+=======================================
+
+These CSS variables define the design system and make it easy to maintain
+consistent colors, spacing, typography, and other design tokens throughout
+the entire website. Variables can be updated in one place and affect all
+elements that use them.
+*/
 
 :root {
-    /* Updated Color Palette */
-    --primary-color: #2E86AB; /* Deep blue */
-    --secondary-color: #6CA6C1; /* Soft blue */
-    --accent-color: #F26419; /* Orange-red */
-    --warm-gold: #F6AA1C; /* Warm gold */
-    --fresh-green: #90BE6D; /* Fresh green */
-    --soft-sand: #E9C46A; /* Soft sand */
-    --light-grey: #F4F4F4; /* Light grey */
-    --dark-grey: #2A2A2A; /* Dark grey */
     
-    --dark-bg: #0F0F0F;
-    --darker-bg: #080808;
-    --card-bg: rgba(255, 255, 255, 0.9);
-    --text-primary: var(--dark-grey);
-    --text-secondary: #6B7280;
-    --text-muted: #666666;
+    /* 
+    ===== COLOR PALETTE =====
+    Professional color scheme based on Career Granny brand
+    Uses descriptive names that indicate the color's purpose
+    */
+    
+    /* Primary brand colors */
+    --primary-color: #2E86AB;      /* Deep blue - main brand color */
+    --secondary-color: #6CA6C1;    /* Soft blue - complementary */
+    --accent-color: #F26419;       /* Orange-red - call-to-action */
+    --warm-gold: #F6AA1C;          /* Warm gold - highlights */
+    --fresh-green: #90BE6D;        /* Fresh green - success states */
+    --soft-sand: #E9C46A;          /* Soft sand - warm accents */
+    
+    /* Neutral colors */
+    --light-grey: #F4F4F4;         /* Light grey - backgrounds */
+    --dark-grey: #2A2A2A;          /* Dark grey - text */
+    
+    /* Background colors for dark theme sections */
+    --dark-bg: #0F0F0F;            /* Very dark background */
+    --darker-bg: #080808;          /* Darkest background */
+    --card-bg: rgba(255, 255, 255, 0.9); /* Semi-transparent white cards */
+    
+    /* Text colors for different hierarchy levels */
+    --text-primary: var(--dark-grey);     /* Main text color */
+    --text-secondary: #6B7280;            /* Secondary text color */
+    --text-muted: #666666;                /* Muted/subtle text color */
+    
+    /* Gradient definitions for backgrounds and buttons */
     --gradient-primary: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     --gradient-secondary: linear-gradient(135deg, var(--warm-gold) 0%, var(--accent-color) 100%);
-    --shadow-primary: 0 20px 40px rgba(46, 134, 171, 0.3);
-    --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.3);
     
-    /* Typography */
-    --font-primary: 'Inter', sans-serif;
-    --font-size-xs: 0.75rem;
-    --font-size-sm: 0.875rem;
-    --font-size-base: 1rem;
-    --font-size-lg: 1.125rem;
-    --font-size-xl: 1.25rem;
-    --font-size-2xl: 1.5rem;
-    --font-size-3xl: 1.875rem;
-    --font-size-4xl: 2.25rem;
-    --font-size-5xl: 3rem;
+    /* Shadow definitions for depth and elevation */
+    --shadow-primary: 0 20px 40px rgba(46, 134, 171, 0.3);  /* Primary color shadow */
+    --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.3);           /* General card shadow */
     
-    /* Spacing */
-    --spacing-xs: 0.5rem;
-    --spacing-sm: 1rem;
-    --spacing-md: 1.5rem;
-    --spacing-lg: 2rem;
-    --spacing-xl: 3rem;
-    --spacing-2xl: 4rem;
     
-    /* Border Radius */
-    --radius-sm: 0.375rem;
-    --radius-md: 0.5rem;
-    --radius-lg: 0.75rem;
-    --radius-xl: 1rem;
-    --radius-2xl: 1.5rem;
+    /* 
+    ===== TYPOGRAPHY SCALE =====
+    Consistent font sizing using a modular scale
+    Based on 1rem = 16px (browser default)
+    */
+    --font-primary: 'Inter', sans-serif;   /* Main font family - modern, readable */
     
-    /* Transitions */
-    --transition-fast: 0.15s ease;
-    --transition-base: 0.3s ease;
-    --transition-slow: 0.5s ease;
+    /* Font sizes from smallest to largest */
+    --font-size-xs: 0.75rem;       /* 12px - fine print, captions */
+    --font-size-sm: 0.875rem;      /* 14px - small text, labels */
+    --font-size-base: 1rem;        /* 16px - body text, base size */
+    --font-size-lg: 1.125rem;      /* 18px - larger body text */
+    --font-size-xl: 1.25rem;       /* 20px - subheadings */
+    --font-size-2xl: 1.5rem;       /* 24px - section headings */
+    --font-size-3xl: 1.875rem;     /* 30px - page headings */
+    --font-size-4xl: 2.25rem;      /* 36px - large headings */
+    --font-size-5xl: 3rem;         /* 48px - hero headings */
+    
+    
+    /* 
+    ===== SPACING SCALE =====
+    Consistent spacing values for margins, padding, gaps
+    Based on a 8px grid system (0.5rem = 8px)
+    */
+    --spacing-xs: 0.5rem;          /* 8px - very small spacing */
+    --spacing-sm: 1rem;            /* 16px - small spacing */
+    --spacing-md: 1.5rem;          /* 24px - medium spacing */
+    --spacing-lg: 2rem;            /* 32px - large spacing */
+    --spacing-xl: 3rem;            /* 48px - extra large spacing */
+    --spacing-2xl: 4rem;           /* 64px - section spacing */
+    
+    /* 
+    ===== BORDER RADIUS SCALE =====
+    Consistent border radius values for rounded corners
+    */
+    --radius-sm: 0.375rem;         /* 6px - small radius */
+    --radius-md: 0.5rem;           /* 8px - medium radius */
+    --radius-lg: 0.75rem;          /* 12px - large radius */
+    --radius-xl: 1rem;             /* 16px - extra large radius */
+    --radius-2xl: 1.5rem;          /* 24px - very large radius */
+    
+    /* 
+    ===== TRANSITION TIMING =====
+    Standard animation durations for consistent feel
+    */
+    --transition-fast: 0.15s ease;     /* Quick transitions - hover states */
+    --transition-base: 0.3s ease;      /* Standard transitions - most UI elements */
+    --transition-slow: 0.5s ease;      /* Slow transitions - large movements */
 }
 
+
+/* 
+=======================================
+2. RESET & BASE STYLES
+=======================================
+
+These styles reset browser defaults and establish the foundation
+for the entire website. They ensure consistency across different
+browsers and provide sensible defaults for common elements.
+*/
+
+/**
+ * Universal box-sizing reset
+ * Makes width/height include padding and border
+ * This prevents sizing surprises and makes CSS more predictable
+ */
+* {
+    margin: 0;              /* Remove default margins */
+    padding: 0;             /* Remove default padding */
+    box-sizing: border-box; /* Include padding/border in element width/height */
+}
+
+/**
+ * HTML element setup
+ * Enables smooth scrolling for anchor links and internal navigation
+ */
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; /* Smooth scrolling when clicking nav links */
 }
 
+/**
+ * Body element - establishes the base styling for the entire page
+ * All other elements inherit from these base styles unless overridden
+ */
 body {
-    font-family: var(--font-primary);
-    background: var(--light-grey);
-    color: var(--dark-grey);
-    line-height: 1.6;
-    overflow-x: hidden;
+    font-family: var(--font-primary);  /* Use Inter font throughout */
+    background: var(--light-grey);     /* Light grey background */
+    color: var(--dark-grey);           /* Dark text for good contrast */
+    line-height: 1.6;                  /* Comfortable line spacing for readability */
+    overflow-x: hidden;                /* Prevent horizontal scrolling */
 }
 
 /* ===== UTILITY CLASSES ===== */
