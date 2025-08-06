@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Career Granny - AI Tech Career Counselor</title>
+    <title>Contact - Career Granny</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,13 +18,13 @@
                 <h2>Career Granny</h2>
             </div>
             <div class="nav-menu" id="nav-menu">
-                <a href="index.html" class="nav-link active">Home</a>
+                <a href="index.html" class="nav-link">Home</a>
                 <a href="about.html" class="nav-link">About</a>
                 <a href="events.html" class="nav-link">Events</a>
                 <a href="resources.html" class="nav-link">Resources</a>
                 <a href="impact.html" class="nav-link">Impact</a>
                 <a href="donate.html" class="nav-link">Donate</a>
-                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
             </div>
             <div class="nav-toggle" id="nav-toggle">
                 <span class="bar"></span>
@@ -34,53 +34,64 @@
         </div>
     </nav>
 
-    <!-- Search Bar -->
-    <div class="search-container" id="search-container">
-        <div class="search-box">
-            <input type="text" id="search-input" placeholder="Search for careers, skills, resources...">
-            <button id="search-btn"><i class="fas fa-search"></i></button>
-        </div>
-        <div class="search-results" id="search-results"></div>
-    </div>
-
     <!-- Main Content -->
     <main>
-        <!-- Home Section -->
-        <section id="home" class="section active">
-            <div class="hero">
-                <div class="hero-background">
-                    <div class="floating-shapes">
-                        <div class="shape shape-1"></div>
-                        <div class="shape shape-2"></div>
-                        <div class="shape shape-3"></div>
-                        <div class="shape shape-4"></div>
-                    </div>
-                </div>
-                <div class="hero-content">
-                    <h1 class="hero-title">
-                        <span class="gradient-text">Empowering Tech Careers</span><br>
-                        <span class="typewriter" id="typewriter">One Student at a Time</span>
-                    </h1>
-                    <p class="hero-description">
-                        Career Granny is a 501(c)(3) non-profit organization providing free AI-powered career counseling, 
-                        skill assessments, and resources to help students become competitive candidates in the tech job market.
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="about.html" class="btn btn-primary">Learn More</a>
-                        <a href="events.html" class="btn btn-secondary">Join Events</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Our Mission Section -->
-            <div class="mission-preview">
-                <div class="container">
-                    <h2 class="section-title">Our Mission</h2>
-                    <div class="mission-content">
-                        <p>Career Granny started as a free AI tech career counselor tool and has evolved into a comprehensive 501(c)(3) non-profit organization. We're dedicated to bridging the gap between students and successful tech careers through personalized guidance, skill assessments, and educational resources.</p>
-                        <div class="mission-button">
-                            <a href="about.html" class="btn btn-primary">Learn More About Us</a>
+        <!-- Contact Section -->
+        <section id="contact" class="section active">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email</strong>
+                                <p>info@careergranny.org</p>
+                            </div>
                         </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Phone</strong>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Address</strong>
+                                <p>123 Tech Street<br>Innovation City, IC 12345</p>
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="contact-form-container">
+                        <form class="contact-form" id="contact-form">
+                            <h3>Send us a Message</h3>
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                                <label for="name">Name</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                                <label for="email">Email</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                                <label for="subject">Subject</label>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                                <label for="message">Message</label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
                     </div>
                 </div>
             </div>

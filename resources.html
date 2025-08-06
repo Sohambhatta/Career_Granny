@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Career Granny - AI Tech Career Counselor</title>
+    <title>Resources - Career Granny</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,10 +18,10 @@
                 <h2>Career Granny</h2>
             </div>
             <div class="nav-menu" id="nav-menu">
-                <a href="index.html" class="nav-link active">Home</a>
+                <a href="index.html" class="nav-link">Home</a>
                 <a href="about.html" class="nav-link">About</a>
                 <a href="events.html" class="nav-link">Events</a>
-                <a href="resources.html" class="nav-link">Resources</a>
+                <a href="resources.html" class="nav-link active">Resources</a>
                 <a href="impact.html" class="nav-link">Impact</a>
                 <a href="donate.html" class="nav-link">Donate</a>
                 <a href="contact.html" class="nav-link">Contact</a>
@@ -34,53 +34,60 @@
         </div>
     </nav>
 
-    <!-- Search Bar -->
-    <div class="search-container" id="search-container">
-        <div class="search-box">
-            <input type="text" id="search-input" placeholder="Search for careers, skills, resources...">
-            <button id="search-btn"><i class="fas fa-search"></i></button>
-        </div>
-        <div class="search-results" id="search-results"></div>
-    </div>
-
     <!-- Main Content -->
     <main>
-        <!-- Home Section -->
-        <section id="home" class="section active">
-            <div class="hero">
-                <div class="hero-background">
-                    <div class="floating-shapes">
-                        <div class="shape shape-1"></div>
-                        <div class="shape shape-2"></div>
-                        <div class="shape shape-3"></div>
-                        <div class="shape shape-4"></div>
-                    </div>
-                </div>
-                <div class="hero-content">
-                    <h1 class="hero-title">
-                        <span class="gradient-text">Empowering Tech Careers</span><br>
-                        <span class="typewriter" id="typewriter">One Student at a Time</span>
-                    </h1>
-                    <p class="hero-description">
-                        Career Granny is a 501(c)(3) non-profit organization providing free AI-powered career counseling, 
-                        skill assessments, and resources to help students become competitive candidates in the tech job market.
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="about.html" class="btn btn-primary">Learn More</a>
-                        <a href="events.html" class="btn btn-secondary">Join Events</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Our Mission Section -->
-            <div class="mission-preview">
-                <div class="container">
-                    <h2 class="section-title">Our Mission</h2>
-                    <div class="mission-content">
-                        <p>Career Granny started as a free AI tech career counselor tool and has evolved into a comprehensive 501(c)(3) non-profit organization. We're dedicated to bridging the gap between students and successful tech careers through personalized guidance, skill assessments, and educational resources.</p>
-                        <div class="mission-button">
-                            <a href="about.html" class="btn btn-primary">Learn More About Us</a>
+        <!-- Resources Section -->
+        <section id="resources" class="section active">
+            <div class="container">
+                <h2 class="section-title">Free Resources</h2>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-graduation-cap"></i>
                         </div>
+                        <h3>Career Assessment Tool</h3>
+                        <p>Take our AI-powered assessment to discover your ideal tech career path based on your skills and interests.</p>
+                        <button class="btn btn-outline">Take Assessment</button>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Skill Guides</h3>
+                        <p>Comprehensive guides covering essential skills for hundreds of different tech careers and specializations.</p>
+                        <button class="btn btn-outline">Browse Guides</button>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h3>Resume Templates</h3>
+                        <p>Professional resume templates optimized for tech positions, with tips for highlighting your unique strengths.</p>
+                        <button class="btn btn-outline">Download Templates</button>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h3>Interview Prep</h3>
+                        <p>Video tutorials and practice questions to help you ace technical interviews and land your dream job.</p>
+                        <button class="btn btn-outline">Start Prep</button>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h3>Industry Insights</h3>
+                        <p>Stay updated with the latest tech trends, salary data, and job market analysis from our research team.</p>
+                        <button class="btn btn-outline">View Insights</button>
+                    </div>
+                    <div class="resource-card">
+                        <div class="resource-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Mentorship Program</h3>
+                        <p>Connect with experienced tech professionals for personalized guidance and career mentorship.</p>
+                        <button class="btn btn-outline">Find Mentor</button>
                     </div>
                 </div>
             </div>

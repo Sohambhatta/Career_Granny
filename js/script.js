@@ -165,22 +165,14 @@ function setupNavigation() {
         });
     }
     
-    // Navigation link clicks
+    // Close mobile menu when clicking on nav links (but allow normal navigation)
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetSection = this.getAttribute('data-section');
-            showSection(targetSection);
-            
             // Close mobile menu if open
             if (navMenu.classList.contains('active')) {
                 navMenu.classList.remove('active');
                 navToggle.classList.remove('active');
             }
-            
-            // Update active nav link
-            navLinks.forEach(l => l.classList.remove('active'));
-            this.classList.add('active');
         });
     });
     
