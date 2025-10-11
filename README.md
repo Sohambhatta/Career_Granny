@@ -2,7 +2,7 @@
 
 Welcome to the official website for **Career Granny**, a 501(c)(3) non-profit organization dedicated to empowering the next generation of tech professionals through AI-powered career guidance and educational resources.
 
-## 🚀 About Career Granny
+##  About Career Granny
 
 Career Granny started as a free AI tech career counselor and has evolved into a comprehensive non-profit organization. Our mission is to bridge the gap between students and successful tech careers by providing:
 
@@ -13,18 +13,18 @@ Career Granny started as a free AI tech career counselor and has evolved into a 
 - **Partnerships with schools and colleges**
 - **Mentorship programs** connecting students with industry professionals
 
-## 🌟 Website Features
+##  Website Features
 
 This website showcases our modern, interactive design with a black and purple theme, featuring:
 
-### ✨ Visual Design
+###  Visual Design
 - **Modern gradient animations** with floating shapes and smooth transitions
 - **Responsive design** that works seamlessly on desktop, tablet, and mobile
 - **Cool background effects** with radial gradients and animated elements
 - **Consistent purple/black theme** with professional typography using Inter font
 - **Glassmorphism effects** using backdrop filters and translucent cards
 
-### 🔧 Interactive Features
+###  Interactive Features
 - **Smooth navigation** between sections with animated transitions
 - **Advanced search functionality** with real-time results and keyboard shortcuts (Ctrl+K)
 - **Event carousel** with touch/swipe support and auto-advancement
@@ -34,14 +34,14 @@ This website showcases our modern, interactive design with a black and purple th
 - **Event filtering** by type (workshops, networking, fundraisers, webinars)
 - **Mobile-responsive navigation** with hamburger menu
 
-### 📱 User Experience
+###  User Experience
 - **Accessibility features** including keyboard navigation and screen reader support
 - **Performance optimizations** with lazy loading and throttled scroll events
 - **Browser compatibility** with fallbacks for older browsers
 - **Smooth scroll behavior** and intersection observer animations
 - **Touch-friendly interface** with hover effects and button animations
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
 Career_Granny/
@@ -53,7 +53,7 @@ Career_Granny/
 └── README.md              # This comprehensive documentation
 ```
 
-## 🎨 Design Theme
+##  Design Theme
 
 ### Color Palette
 - **Primary Purple**: `#8B5CF6` - Used for buttons, links, and accents
@@ -75,7 +75,7 @@ Career_Granny/
 - **Smooth animations** using CSS transitions and keyframe animations
 - **Floating shapes** with continuous rotation and movement
 
-## 📋 Website Sections
+##  Website Sections
 
 ### 1. **Home Section**
 - **Hero area** with animated gradient background and floating shapes
@@ -146,7 +146,7 @@ Career_Granny/
 - **Search functionality** with fuzzy matching
 - **Accessibility enhancements** with keyboard navigation
 
-## 🔍 Search Functionality
+##  Search Functionality
 
 The website includes a powerful search feature that allows users to find:
 - **Career paths** (Software Engineer, Data Scientist, UX Designer, etc.)
@@ -156,7 +156,7 @@ The website includes a powerful search feature that allows users to find:
 
 **Usage**: Press `Ctrl+K` to open search, or click the search icon in the navigation.
 
-## 📱 Mobile Responsiveness
+##  Mobile Responsiveness
 
 The website is fully responsive and optimized for:
 - **Desktop** (1200px+): Full multi-column layouts with all features
@@ -170,7 +170,7 @@ The website is fully responsive and optimized for:
 - **Optimized typography** scaling for readability
 - **Compressed layouts** that maintain visual hierarchy
 
-## ⚡ Performance Optimizations
+##  Performance Optimizations
 
 - **Efficient CSS** with minimal specificity and optimized selectors
 - **Optimized JavaScript** with debounced scroll events and throttled functions
@@ -179,7 +179,7 @@ The website is fully responsive and optimized for:
 - **CSS animations** preferred over JavaScript for better performance
 - **Event delegation** for improved memory management
 
-## 🎯 Accessibility Features
+##  Accessibility Features
 
 - **Semantic HTML** structure for screen readers
 - **Keyboard navigation** support for all interactive elements
@@ -189,7 +189,7 @@ The website is fully responsive and optimized for:
 - **Color contrast** meeting WCAG guidelines
 - **Reduced motion** support for users with vestibular disorders
 
-## 🌐 Browser Compatibility
+##  Browser Compatibility
 
 The website supports:
 - **Modern browsers**: Chrome 60+, Firefox 55+, Safari 12+, Edge 79+
@@ -198,7 +198,7 @@ The website supports:
 - **Polyfills** for missing JavaScript APIs
 - **Graceful degradation** for unsupported features
 
-## 🚀 Deployment Instructions
+##  Deployment Instructions
 
 ### Local Development
 1. **Clone or download** the project files
@@ -222,7 +222,7 @@ The website supports:
 4. **Configure caching headers** for static assets
 5. **Test thoroughly** across different devices and browsers
 
-## 📈 Future Enhancements
+##  Future Enhancements
 
 Potential future additions could include:
 - **Backend integration** for form submissions and event registration
@@ -234,7 +234,7 @@ Potential future additions could include:
 - **Dark/light mode toggle** for user preference
 - **Advanced analytics** for user behavior tracking
 
-## 🤝 Contributing
+##  Contributing
 
 As a non-profit organization, we welcome contributions from the community:
 - **Code contributions** for new features or bug fixes
@@ -243,7 +243,7 @@ As a non-profit organization, we welcome contributions from the community:
 - **Accessibility improvements** for better inclusion
 - **Performance optimizations** for faster loading
 
-## 📞 Contact Information
+##  Contact Information
 
 **Career Granny**  
 Email: info@careergranny.org  
@@ -256,7 +256,7 @@ Address: 123 Tech Street, Innovation City, IC 12345
 - Facebook: [Career Granny](https://facebook.com/careergranny)
 - Instagram: [@CareerGranny](https://instagram.com/careergranny)
 
-## 📄 License
+##  License
 
 This website is created for Career Granny, a 501(c)(3) non-profit organization. All content and code are proprietary to the organization and its mission of empowering tech careers.
 
