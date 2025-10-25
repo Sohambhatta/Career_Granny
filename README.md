@@ -246,9 +246,6 @@ As a non-profit organization, we welcome contributions from the community:
 ##  Contact Information
 
 **Career Granny**  
-Email: info@careergranny.org  
-Phone: +1 (555) 123-4567  
-Address: 123 Tech Street, Innovation City, IC 12345
 
 **Social Media:**
 - LinkedIn: [Career Granny Organization](https://linkedin.com/company/career-granny)
